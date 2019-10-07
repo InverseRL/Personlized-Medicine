@@ -3,6 +3,9 @@
 Created on Mon Sep 11 12:31:22 2017
 
 @author: Jeshurun
+
+The word embeddings are trained using Word2Vec using both the train and test texts,
+
 """
 
 import numpy as np
@@ -14,7 +17,7 @@ train_text=pd.read_csv("F:/to do/kaggle/personalized medicine/training_text/trai
 #test_text=pd.read_csv("F:/to do/kaggle/personalized medicine/test_text/test_text",sep="\|\|",engine='python' header=None,skiprows=1,names=["ID","text"])
 s2_test_text=pd.read_csv("F:/to do/kaggle/personalized medicine/stage2_test_text.csv/stage2_test_text.csv",sep="\|\|",engine='python',
                        header=None,skiprows=1,names=["ID","text"])
-
+'''
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences,skipgrams
 from keras.layers import Embedding
@@ -22,9 +25,9 @@ from keras.models import Sequential
 
 frames=[train_text,s2_test_text]
 tot_text=pd.concat(frames)
+'''
 
-
- 
+ #Wor2Vec model for the text
 from gensim.models import Word2Vec
  
 model=Word2Vec(tot_text["text"][0:],min_count=2,size=50,sg=1,window=3)
