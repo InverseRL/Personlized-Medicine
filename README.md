@@ -6,3 +6,8 @@ Multi-class text classificatio problem to classify genetic mutations using clini
 Toolkits used:
 sklearn, gensim, keras, pandas
 
+
+Results:
+https://www.kaggle.com/jeshurun
+https://www.kaggle.com/c/msk-redefining-cancer-treatment/leaderboard
+
